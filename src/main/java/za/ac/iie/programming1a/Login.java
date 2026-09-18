@@ -1,5 +1,7 @@
 package za.ac.iie.programming1a;
 
+// Login class for the Programming 1A registration and login system.
+
 public class Login {
 
 
