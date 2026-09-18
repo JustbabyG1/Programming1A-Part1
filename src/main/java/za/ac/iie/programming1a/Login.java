@@ -41,6 +41,8 @@ public class Login {
 
         public boolean checkCellPhoneNumber() {
 
+            // Regular expression approach based on Oracle's Java Regular Expressions documentation.
+            // Source: Oracle, "Regular Expressions", Java Tutorials.
             String phoneRegex = "^\\+\\d{1,3}\\d{1,10}$";
 
             return cellphoneNumber.matches(phoneRegex);
