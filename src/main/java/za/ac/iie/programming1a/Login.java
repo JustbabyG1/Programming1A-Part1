@@ -57,7 +57,7 @@ public class Login {
             }
 
             if (!checkCellPhoneNumber()) {
-                return "Cell number is incorrectly formatted or does not contain an international code; please correct the number and try again.";
+                return "Cell number incorrectly formatted or does not contain an international code.";
             }
 
             return "Registration successful.";
