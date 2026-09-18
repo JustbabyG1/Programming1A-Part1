@@ -2,7 +2,7 @@ package za.ac.iie.programming1a;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class LoginTest {
 
@@ -18,7 +18,7 @@ public class LoginTest {
                 "Smith"
         );
 
-        assertEquals(true, user.checkUserName());
+        assertTrue(user.checkUserName());
     }
 
     @Test
@@ -32,7 +32,7 @@ public class LoginTest {
                 "Smith"
         );
 
-        assertEquals(false, user.checkUserName());
+        assertFalse(user.checkUserName());
     }
 
     @Test
@@ -46,7 +46,7 @@ public class LoginTest {
                 "Smith"
         );
 
-        assertEquals(true, user.checkPasswordComplexity());
+        assertTrue(user.checkPasswordComplexity());
     }
 
     @Test
@@ -60,7 +60,7 @@ public class LoginTest {
                 "Smith"
         );
 
-        assertEquals(false, user.checkPasswordComplexity());
+        assertFalse(user.checkPasswordComplexity());
     }
 
     @Test
@@ -74,7 +74,7 @@ public class LoginTest {
                 "Smith"
         );
 
-        assertEquals(true, user.checkCellPhoneNumber());
+        assertTrue(user.checkCellPhoneNumber());
     }
 
     @Test
@@ -88,7 +88,7 @@ public class LoginTest {
                 "Smith"
         );
 
-        assertEquals(false, user.checkCellPhoneNumber());
+        assertFalse(user.checkCellPhoneNumber());
     }
 
     @Test
@@ -102,10 +102,7 @@ public class LoginTest {
                 "Smith"
         );
 
-        assertEquals(
-                true,
-                user.loginUser("kyl_1", "Ch&sec@ke99!")
-        );
+        assertTrue(user.loginUser("kyl_1", "Ch&sec@ke99!"));
     }
 
     @Test
@@ -119,10 +116,7 @@ public class LoginTest {
                 "Smith"
         );
 
-        assertEquals(
-                false,
-                user.loginUser("wrong", "wrong")
-        );
+        assertFalse(user.loginUser("wrong", "wrong"));
     }
 
     @Test
