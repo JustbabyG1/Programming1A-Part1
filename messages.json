@@ -1,0 +1,42 @@
+[
+  {
+    "messageHash": "08:0:HEYLONZ",
+    "messageID": "0825902249",
+    "messageNumber": 0,
+    "messageStatus": "Stored",
+    "messageText": "Hey Lonz",
+    "recipient": "+27646816217"
+  },
+  {
+    "messageHash": "07:0:WASSUPWASSUP",
+    "messageID": "0713951950",
+    "messageNumber": 0,
+    "messageStatus": "",
+    "messageText": "wassup",
+    "recipient": "+27646816217"
+  },
+  {
+    "messageHash": "03:1:YOBRODIE",
+    "messageID": "0779661661",
+    "messageNumber": 0,
+    "messageStatus": "Stored",
+    "messageText": "yo brodie",
+    "recipient": "+27646816217"
+  },
+  {
+    "messageHash": "07:0:BROBRO",
+    "messageID": "0359697625",
+    "messageNumber": 1,
+    "messageStatus": "Stored",
+    "messageText": "bro",
+    "recipient": "+27646816217"
+  },
+  {
+    "messageID": "0753912453",
+    "messageNumber": 0,
+    "recipient": "+27646816217",
+    "messageText": "when can i come",
+    "messageHash": "07:0:WHENCOME",
+    "messageStatus": "Stored"
+  }
+]
