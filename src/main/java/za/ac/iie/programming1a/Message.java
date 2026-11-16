@@ -6,6 +6,12 @@ import com.google.gson.GsonBuilder;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import com.google.gson.reflect.TypeToken;
+
+import java.io.File;
+import java.io.FileReader;
+import java.lang.reflect.Type;
+import java.util.List;
 
 public class Message {
     private static ArrayList<Message> allMessages = new ArrayList<>();
@@ -107,6 +113,9 @@ public class Message {
     public String getMessageHash() {
         return messageHash;
     }
+    public String getMessageStatus() {
+        return messageStatus;
+    }
 
     public static String printMessages() {
         StringBuilder result = new StringBuilder();
@@ -136,19 +145,53 @@ public class Message {
     }
 
     public String storeMessage() {
+
         messageStatus = "Stored";
 
-        System.out.println("Status before saving: " + messageStatus);
-        System.out.println("Saving file to: " + new java.io.File("messages.json").getAbsolutePath());
+        List<Message> savedMessages = new ArrayList<>();
 
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        Gson gson = new Gson();
 
-        try (FileWriter writer = new FileWriter("messages.json", true)) {
-            gson.toJson(this, writer);
-            writer.write(System.lineSeparator());
+        Type messageListType =
+                new TypeToken<List<Message>>() {}.getType();
+
+        File file = new File("messages.json");
+
+        // Read existing messages
+        if (file.exists() && file.length() > 0) {
+
+            try (FileReader reader = new FileReader(file)) {
+
+                List<Message> existingMessages =
+                        gson.fromJson(reader, messageListType);
+
+                if (existingMessages != null) {
+                    savedMessages.addAll(existingMessages);
+                }
+
+            } catch (IOException e) {
+                return "Error reading messages: " + e.getMessage();
+            } catch (RuntimeException e) {
+                return "Error: messages.json contains invalid JSON.";
+            }
+        }
+
+        // Add the new message
+        savedMessages.add(this);
+
+        // Save the complete JSON array
+        Gson prettyGson = new GsonBuilder()
+                .setPrettyPrinting()
+                .create();
+
+        try (FileWriter writer = new FileWriter("messages.json")) {
+
+            prettyGson.toJson(savedMessages, writer);
 
             return "Message successfully stored.";
+
         } catch (IOException e) {
+
             return "Error storing message: " + e.getMessage();
         }
     }

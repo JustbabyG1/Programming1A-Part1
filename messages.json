@@ -1,35 +1,27 @@
 [
   {
-    "messageHash": "08:0:HEYLONZ",
-    "messageID": "0825902249",
-    "messageNumber": 0,
-    "messageStatus": "Stored",
-    "messageText": "Hey Lonz",
-    "recipient": "+27646816217"
-  },
-  {
-    "messageHash": "07:0:WASSUPWASSUP",
     "messageID": "0713951950",
     "messageNumber": 0,
-    "messageStatus": "",
+    "recipient": "+27646816217",
     "messageText": "wassup",
-    "recipient": "+27646816217"
+    "messageHash": "07:0:WASSUPWASSUP",
+    "messageStatus": ""
   },
   {
-    "messageHash": "03:1:YOBRODIE",
     "messageID": "0779661661",
     "messageNumber": 0,
-    "messageStatus": "Stored",
+    "recipient": "+27646816217",
     "messageText": "yo brodie",
-    "recipient": "+27646816217"
+    "messageHash": "03:1:YOBRODIE",
+    "messageStatus": "Stored"
   },
   {
-    "messageHash": "07:0:BROBRO",
     "messageID": "0359697625",
     "messageNumber": 1,
-    "messageStatus": "Stored",
+    "recipient": "+27646816217",
     "messageText": "bro",
-    "recipient": "+27646816217"
+    "messageHash": "07:0:BROBRO",
+    "messageStatus": "Stored"
   },
   {
     "messageID": "0753912453",
@@ -37,6 +29,14 @@
     "recipient": "+27646816217",
     "messageText": "when can i come",
     "messageHash": "07:0:WHENCOME",
+    "messageStatus": "Stored"
+  },
+  {
+    "messageID": "0177964872",
+    "messageNumber": 0,
+    "recipient": "+27646816217",
+    "messageText": "I\u0027m finally done with my Prog Task",
+    "messageHash": "01:0:I\u0027MTASK",
     "messageStatus": "Stored"
   }
 ]
